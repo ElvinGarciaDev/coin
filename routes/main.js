@@ -15,4 +15,9 @@ router.get("/logout", authController.logout)
 router.get("/signup", authController.getSignup)
 router.post("/signup", authController.postSignup)
 
+// Route for incomeInput.ejs. Users will be able to enter their monthly income
+router.get("/incomeInput", postsController.getincomeInput)
+
+
+
 module.exports = router;

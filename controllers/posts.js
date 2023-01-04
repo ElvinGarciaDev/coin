@@ -2,6 +2,13 @@
 const Post = require("../models/Post");
 
 module.exports = {
+
+  // Render the incomeInput ejs page. Users will be able to enter their monthly income
+  getincomeInput: (req, res) => {
+    console.log("Hello")
+    res.render("incomeInput.ejs");
+  },
+
   getProfile: async (req, res) => {
     try {
       const pending = await Post.find({ completed: 'pending' })
